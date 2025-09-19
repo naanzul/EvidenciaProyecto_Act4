@@ -60,10 +60,15 @@ def move():
     # Redibujamos todo
     draw()
 
-   
+patch-1
+    if target.x < -200:
+        target.x = 200
+        target.y = randrange(-150, 150)
+        
     for target in targets:
         if not inside(target):
             return
+
 
     ontimer(move, 30)  # más rápido (antes 50)
 
